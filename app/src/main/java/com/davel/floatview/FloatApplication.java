@@ -1,4 +1,4 @@
-package com.davel.red;
+package com.davel.floatview;
 
 import android.app.Application;
 import android.view.WindowManager;

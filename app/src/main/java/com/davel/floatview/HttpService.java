@@ -1,4 +1,4 @@
-package com.davel.red;
+package com.davel.floatview;
 
 import android.app.Service;
 import android.content.Intent;
@@ -30,6 +30,10 @@ public class HttpService extends Service {
         }
     }
 
+    public class HttpServiceHanler extends Handler {
+
+    }
+
 
     public interface HttpServiceListener {
         void onResult(String msg);
@@ -48,19 +52,18 @@ public class HttpService extends Service {
                 HttpRequest httpRequest = new HttpRequest();
                 while(true){
                     try {
-//                        String msg = httpRequest.get("https://2020.ip138.com/");
-                        String msg = "hhhh";
+                        String msg = httpRequest.get("https://xcash.miaoxiangcl.com/h5/CurrencyArea/area_info");
                         Log.e("HttpService","get:"+msg);
                         //进度发生变化通知调用方
                         if(httpServiceListener != null){
-                            httpServiceListener.onResult(msg);
+                            httpServiceListener.onResult(msg+"\n");
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
 
                     try {
-                        Thread.sleep(5000);
+                        Thread.sleep(3000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

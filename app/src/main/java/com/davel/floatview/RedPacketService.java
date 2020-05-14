@@ -1,4 +1,4 @@
-package com.davel.red;
+package com.davel.floatview;
 
 import android.accessibilityservice.AccessibilityService;
 import android.annotation.SuppressLint;

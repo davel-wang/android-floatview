@@ -1,4 +1,4 @@
-package com.davel.red;
+package com.davel.floatview;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.davel.red", appContext.getPackageName());
+        assertEquals("com.davel.floatview", appContext.getPackageName());
     }
 }
